@@ -105,19 +105,12 @@ echo. =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
 echo.					AeySoft
 echo.			   thungong.c@gmail.com
 if %errorlevel% neq 0 goto end
-rem cls
-rem echo.
-rem echo. ++++++++++++++++++++++++
-rem echo   Next Run in:%min% Minutes OR %tm% Sec.
-rem echo. ++++++++++++++++++++++++
 ping localhost -n 2 >nul
 set /a tm=%tm%-1
 set /a min=%tm%/60
-
 if %tm%==0 (
 goto next3
 )else goto :loop2
-rem ping localhost -n 4 >nul
 :next3
 mode 50,20
 color 06
@@ -139,9 +132,7 @@ echo. ----------------------------------------------
 echo.
 echo.  
 echo.
-rem echo. ----------------------------------------------
 ping localhost -n 4 >nul
-rem ping localhost -n %delaytime% >nul
 goto :next2
 :error
 echo.
